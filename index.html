@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEXTG — Progetto FIS</title>
+<title>[Titolo del Progetto] — Progetto FIS</title>
 <meta name="description" content="Sito del progetto di ricerca [Titolo del Progetto], finanziato dal Fondo Italiano per la Scienza (FIS).">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,14 +12,15 @@
 
 <style>
   :root{
-    --ink:        #14213D;   /* blu inchiostro - titoli, testo primario */
-    --ink-soft:   #3A4763;   /* testo secondario */
-    --paper:      #F7F5F0;   /* fondo carta */
-    --paper-alt:  #EFECE3;   /* sezioni alternate */
-    --line:       #D8D3C6;   /* righe sottili, bordi */
-    --accent:     #1F6F5C;   /* verde petrolio - stato attivo, link, highlight */
-    --accent-soft:#E3EDE9;
-    --gold:       #B08A3E;   /* badge finanziamento, uso minimo */
+    --ink:        #1C2E23;   /* verde-nero profondo, in tono con il DNA del logo - titoli, testo primario */
+    --ink-soft:   #47564B;   /* variante più chiara per testo secondario */
+    --paper:      #FAF6EA;   /* fondo carta, tono caldo che richiama la spiga */
+    --paper-alt:  #F1E8D2;   /* sezioni alternate, più calde */
+    --line:       #DED0A8;   /* righe sottili, bordi - tono grano */
+    --accent:     #3B7C54;   /* verde DNA del logo - stato attivo, link, highlight */
+    --accent-soft:#E3EEE6;
+    --gold:       #E2A01F;   /* oro grano del logo - bordi, elementi decorativi */
+    --gold-text:  #8C6512;   /* variante scurita, usata per il testo sopra sfondo chiaro (contrasto AA) */
     --white:      #FFFFFF;
 
     --serif: 'Source Serif 4', Georgia, serif;
@@ -61,10 +62,7 @@
     color: var(--ink); letter-spacing: 0.02em;
     display:flex; align-items:center; gap:10px;
   }
-  .brand .dot{
-    width:8px; height:8px; border-radius:50%; background: var(--accent);
-    box-shadow: 0 0 0 3px var(--accent-soft);
-  }
+  .brand .brand-icon{ height: 34px; width:auto; display:block; }
   .nav-links{ display:flex; gap: 28px; list-style:none; font-size:0.92rem; }
   .nav-links a{ color: var(--ink-soft); }
   .nav-toggle{ display:none; background:none; border:none; cursor:pointer; font-size:1.4rem; color:var(--ink); }
@@ -85,10 +83,14 @@
     padding: 88px 0 72px;
     border-bottom: 1px solid var(--line);
   }
+  .hero-logo{
+    display:block; height: auto; width: 100%; max-width: 340px;
+    margin-bottom: 32px;
+  }
   .funding-badge{
     display:inline-flex; align-items:center; gap:8px;
     font-family: var(--mono); font-size: 0.78rem;
-    color: var(--gold); border: 1px solid var(--gold);
+    color: var(--gold-text); border: 1px solid var(--gold);
     padding: 5px 12px; border-radius: 2px;
     text-transform: uppercase; letter-spacing: 0.08em;
     margin-bottom: 28px;
@@ -227,13 +229,75 @@
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior:auto; }
   }
+
+  /* ---------- LOGO FIRMA (MUR + FIS 2) ----------
+     Obbligatorio secondo le Linee Guida FIS 2 (Decreto Direttoriale n. 1236/2023):
+     il "logo firma" (logo MUR + logo di progetto/bando) deve comparire in ogni
+     pagina di dettaglio del sito, sia di primo che di secondo livello.
+     Gerarchia: l'ente istituzionale più ampio (MUR) precede quello più specifico (FIS),
+     separati da una linea verticale, con un'area di rispetto minima pari a 1/7
+     della base del logo completo (1/8 se affiancato da testo). --------------- */
+  .signature-bar{
+    background: #2B4C8C; /* blu istituzionale MUR, sostituire se necessario con i toni ufficiali */
+    color: #FFFFFF;
+    padding: 14px 0;
+  }
+  .signature-bar .wrap{
+    display:flex; align-items:center; gap: clamp(16px, 3vw, 28px);
+    flex-wrap: wrap;
+  }
+  .signature-bar .logo-slot{
+    display:flex; align-items:center; gap:10px;
+    height: 40px;
+  }
+  .signature-bar .logo-slot img{
+    height: 100%; width:auto; display:block;
+  }
+  /* Testo di riserva finché non vengono caricati i file dei loghi ufficiali */
+  .signature-bar .logo-fallback{
+    font-family: var(--sans); font-weight:600; font-size:0.92rem; line-height:1.15;
+    white-space: nowrap;
+  }
+  .signature-bar .logo-fallback small{ display:block; font-weight:400; font-size:0.7rem; opacity:0.85; }
+  .signature-bar .divider{
+    width:1px; align-self:stretch; background: rgba(255,255,255,0.45);
+  }
+  .signature-bar .fis-mark{ color:#F2E3C6; font-family: var(--serif); font-weight:700; font-size:1.15rem; }
+
+  /* Versione compatta del logo firma nel footer */
+  .footer-signature{
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  }
+  .footer-signature .logo-slot{ height: 26px; display:flex; align-items:center; }
+  .footer-signature .logo-slot img{ height:100%; width:auto; }
+  .footer-signature .divider{ width:1px; height:20px; background: var(--line); }
+
+  .funding-disclosure{
+    background: var(--white); border:1px solid var(--line); border-left:3px solid var(--gold);
+    padding: 24px 28px; max-width: 78ch; margin-top: 24px; font-size:0.92rem; color: var(--ink-soft);
+  }
 </style>
 </head>
 <body>
 
+<div class="signature-bar">
+  <div class="wrap">
+    <!-- LOGO FIRMA: sostituire gli span sottostanti con i file ufficiali,
+         es. <img src="assets/logo-mur.svg" alt="Ministero dell'Università e della Ricerca">
+         Il logo MUR precede sempre il logo FIS 2 (gerarchia ente più ampio -> più specifico). -->
+    <div class="logo-slot">
+      <span class="logo-fallback">Ministero dell'Università<small>e della Ricerca</small></span>
+    </div>
+    <span class="divider" aria-hidden="true"></span>
+    <div class="logo-slot">
+      <span class="logo-fallback fis-mark">FIS 2</span>
+    </div>
+  </div>
+</div>
+
 <header>
   <nav class="wrap">
-    <div class="brand"><span class="dot"></span>PROGETTO-FIS-XXXX</div>
+    <div class="brand"><img src="assets/logo-next-g-icon.png" alt="NEXT-G" class="brand-icon">NEXT-G</div>
     <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">☰</button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#abstract">Il progetto</a></li>
@@ -248,8 +312,9 @@
 
 <section class="hero">
   <div class="wrap">
+    <img src="assets/logo-next-g-full.png" alt="Logo del progetto NEXT-G — How new genes emerge" class="hero-logo">
     <span class="funding-badge">★ Finanziato dal Fondo Italiano per la Scienza</span>
-    <h1>NEXTG</h1>
+    <h1>[Titolo completo del progetto di ricerca]</h1>
     <p class="lede">
       [Una frase di sintesi che spiega in linguaggio non tecnico cosa fa il progetto e perché conta —
       2-3 righe pensate per chi non è del settore.]
@@ -416,6 +481,12 @@
         <div class="val">€ [importo]</div>
       </div>
     </div>
+    <div class="funding-disclosure">
+      <p>Il presente progetto è stato realizzato con il finanziamento del <strong>Ministero dell'Università e della Ricerca (MUR)</strong> nell'ambito dell'Avviso FIS 2 (Decreto Direttoriale n. 1236 del 1° agosto 2023 — Fondo Italiano per la Scienza 2022-2023).</p>
+      <p style="margin-top:10px;">[Finalità del progetto: sintetizza in 1-2 frasi l'obiettivo per cui è stato ottenuto il sostegno finanziario.]</p>
+      <p style="margin-top:10px;">[Risultati attesi: descrivi cosa si prevede di ottenere entro la conclusione del progetto.]</p>
+      <p style="margin-top:10px;">[Risultati raggiunti: da aggiornare progressivamente durante l'attuazione del progetto, come richiesto dalle Linee Guida FIS 2.]</p>
+    </div>
   </div>
 </section>
 
@@ -443,9 +514,15 @@
 </section>
 
 <footer>
-  <div class="wrap" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; width:100%;">
+  <div class="wrap" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px; width:100%;">
     <span>© <span id="year"></span> [Nome progetto] — Tutti i diritti riservati</span>
-    <span>Finanziato dal Fondo Italiano per la Scienza</span>
+    <div class="footer-signature">
+      <!-- Stessa gerarchia della barra in alto: sostituire con i file ufficiali dei loghi -->
+      <div class="logo-slot"><span class="logo-fallback" style="font-size:0.78rem;">Ministero dell'Università e della Ricerca</span></div>
+      <span class="divider" aria-hidden="true"></span>
+      <div class="logo-slot"><span class="logo-fallback" style="font-size:0.78rem;">FIS 2</span></div>
+    </div>
+    <span>Finanziato dal Ministero dell'Università e della Ricerca — Avviso FIS 2</span>
   </div>
 </footer>
 

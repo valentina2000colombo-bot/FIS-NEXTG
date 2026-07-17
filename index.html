@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[Titolo del Progetto] — Progetto FIS</title>
-<meta name="description" content="Sito del progetto di ricerca NEXT-G, finanziato dal Fondo Italiano per la Scienza (FIS).">
+<title>NEXT-G — How new genes emerge | FIS 2 Project</title>
+<meta name="description" content="NEXT-G: how new genes emerge. A research project on transposable element exaptation in wheat evolution, funded by the Italian Ministry of University and Research under the Italian Fund for Science (FIS 2 Call).">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -230,15 +230,15 @@
     html{ scroll-behavior:auto; }
   }
 
-  /* ---------- LOGO FIRMA (MUR + FIS 2) ----------
-     Obbligatorio secondo le Linee Guida FIS 2 (Decreto Direttoriale n. 1236/2023):
-     il "logo firma" (logo MUR + logo di progetto/bando) deve comparire in ogni
-     pagina di dettaglio del sito, sia di primo che di secondo livello.
-     Gerarchia: l'ente istituzionale più ampio (MUR) precede quello più specifico (FIS),
-     separati da una linea verticale, con un'area di rispetto minima pari a 1/7
-     della base del logo completo (1/8 se affiancato da testo). --------------- */
+  /* ---------- SIGNATURE LOGO (MUR + FIS 2) ----------
+     Mandatory under the FIS 2 Guidelines (Decreto Direttoriale n. 1236/2023):
+     the "signature logo" (MUR logo + project/call logo) must appear on every
+     detail page of the site, both first- and second-level.
+     Hierarchy: the broader institutional body (MUR) precedes the more specific one (FIS),
+     separated by a vertical line, with a minimum clear space equal to 1/7
+     of the full logo's base width (1/8 if placed next to text). --------------- */
   .signature-bar{
-    background: #47564B; 
+    background: #2B4C8C; /* blu istituzionale MUR, sostituire se necessario con i toni ufficiali */
     color: #FFFFFF;
     padding: 14px 0;
   }
@@ -282,11 +282,11 @@
 
 <div class="signature-bar">
   <div class="wrap">
-    <!-- LOGO FIRMA: sostituire gli span sottostanti con i file ufficiali,
-         es. <img src="assets/logo-mur.svg" alt="Ministero dell'Università e della Ricerca">
-         Il logo MUR precede sempre il logo FIS 2 (gerarchia ente più ampio -> più specifico). -->
+    <!-- SIGNATURE LOGO: replace the spans below with the official logo files,
+         e.g. <img src="assets/logo-mur.svg" alt="Italian Ministry of University and Research">
+         The MUR logo always precedes the FIS 2 logo (hierarchy: broader body -> more specific). -->
     <div class="logo-slot">
-      <span class="logo-fallback">Ministero dell'Università<small>e della Ricerca</small></span>
+      <span class="logo-fallback">Italian Ministry of<small>University and Research</small></span>
     </div>
     <span class="divider" aria-hidden="true"></span>
     <div class="logo-slot">
@@ -297,43 +297,46 @@
 
 <header>
   <nav class="wrap">
-    <div class="brand"><img src="logo-next-g-icon.png" alt="NEXT-G" class="brand-icon">NEXT-G</div>
-    <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">☰</button>
+    <div class="brand"><img src="assets/logo-next-g-icon.png" alt="NEXT-G" class="brand-icon">NEXT-G</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#abstract">Il progetto</a></li>
-      <li><a href="#obiettivi">Obiettivi</a></li>
-      <li><a href="#metodologia">Metodologia</a></li>
+      <li><a href="#abstract">The project</a></li>
+      <li><a href="#obiettivi">Objectives</a></li>
+      <li><a href="#metodologia">Methodology</a></li>
       <li><a href="#team">Team</a></li>
-      <li><a href="#risultati">Risultati</a></li>
-      <li><a href="#contatti">Contatti</a></li>
+      <li><a href="#risultati">Results</a></li>
+      <li><a href="#contatti">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <section class="hero">
   <div class="wrap">
-    <img src="logo-next-g-full.png" alt="Logo del progetto NEXT-G — How new genes emerge" class="hero-logo">
+    <img src="assets/logo-next-g-full.png" alt="NEXT-G project logo — How new genes emerge" class="hero-logo">
+    <span class="funding-badge">★ Funded by the Italian Fund for Science</span>
     <h1>How new genes emerge: exploring a model of novel gene creation following the evolution of wheat</h1>
     <p class="lede">
-      [Una frase di sintesi che spiega in linguaggio non tecnico cosa fa il progetto e perché conta —
-      2-3 righe pensate per chi non è del settore.]
+      This project studies how certain mobile DNA elements (transposons), often dismissed as "junk DNA",
+      can turn into fully-fledged new genes. Using wheat — one of the world's most important crops,
+      with a well-known evolutionary history — the research will reconstruct when and how these new genes
+      emerged, aiming to identify sequences that could help improve the resilience of future crops.
     </p>
     <div class="meta-row">
       <div class="meta-item">
-        <span class="label">Codice progetto</span>
-        <span class="value">FIS-2023-02552</span>
+        <span class="label">Project code</span>
+        <span class="value">FIS-02552</span>
       </div>
       <div class="meta-item">
-        <span class="label">Ente ospitante</span>
-        <span class="value">Università di Pisa</span>
+        <span class="label">Host institution</span>
+        <span class="value">University of Pisa — Dept. of Agriculture, Food and Environment (DAFE)</span>
       </div>
       <div class="meta-item">
-        <span class="label">36 mesi</span>
-        <span class="value">MM/AAAA – MM/AAAA</span>
+        <span class="label">Duration</span>
+        <span class="value">36 months</span>
       </div>
       <div class="meta-item">
-        <span class="label">Stato</span>
-        <span class="value" style="color:var(--accent)">● Attivo</span>
+        <span class="label">Status</span>
+        <span class="value" style="color:var(--accent)">● Active</span>
       </div>
     </div>
   </div>
@@ -341,36 +344,36 @@
 
 <section id="abstract">
   <div class="wrap">
-    <span class="eyebrow">Il progetto</span>
+    <span class="eyebrow">The project</span>
     <h2>Abstract</h2>
     <div class="abstract-box">
-      <p>[Paragrafo 1: contesto scientifico e problema aperto che il progetto affronta.]</p>
-      <p>[Paragrafo 2: approccio proposto e cosa lo rende innovativo rispetto allo stato dell'arte.]</p>
-      <p>[Paragrafo 3: impatto atteso, scientifico e/o applicativo.]</p>
+      <p>Transposable elements (TEs) are DNA sequences able to move within the genome. Their activity is normally kept in check by the host organism, but under certain conditions part of these sequences can be "repurposed" (exapted) into a fully functional gene with a useful role for the plant. This phenomenon, known as exaptation, is still poorly studied and understood.</p>
+      <p>NEXT-G will use wheat — a crop whose evolutionary history, including the hybridisation and polyploidisation events that shaped its genome, is very well characterised — as the ideal system to identify these transposon-derived genes and reconstruct when and how they arose, combining bioinformatics, functional genomics and metagenomic approaches.</p>
+      <p>The project will provide the first systematic map of these genes in wheat, helping to understand how new genes form and how this may have historically contributed to the domestication and adaptation of wheat to diverse environments — with potential applications for breeding more resilient crops in the face of climate change.</p>
     </div>
   </div>
 </section>
 
 <section class="alt" id="obiettivi">
   <div class="wrap">
-    <span class="eyebrow">Struttura della ricerca</span>
-    <h2>Obiettivi del progetto</h2>
-    <p class="section-intro">[Breve introduzione: in quanti obiettivi/work package è articolato il progetto e con quale logica.]</p>
+    <span class="eyebrow">Research structure</span>
+    <h2>Project objectives</h2>
+    <p class="section-intro">The project is organised into 3 scientific objectives (P1-P3), alongside the cross-cutting Coordination (P0) and Dissemination and data management (P4) activities.</p>
     <div class="obj-grid">
       <div class="obj-card">
-        <span class="obj-num">Obiettivo 01</span>
-        <h3>[Titolo obiettivo 1]</h3>
-        <p>[Descrizione sintetica: cosa si intende ottenere e come si misura il successo.]</p>
+        <span class="obj-num">Objective 01</span>
+        <h3>Identify transposon-derived genes in wheat</h3>
+        <p>Build the first extensive collection of exapted transposable elements (ETEs) in the bread wheat genome, using a bioinformatic pipeline based on HMM models already validated in other species.</p>
       </div>
       <div class="obj-card">
-        <span class="obj-num">Obiettivo 02</span>
-        <h3>[Titolo obiettivo 2]</h3>
-        <p>[Descrizione sintetica.]</p>
+        <span class="obj-num">Objective 02</span>
+        <h3>Characterise their biological role</h3>
+        <p>Analyse tissue-specific expression and DNA methylation patterns of these genes to understand what functions they perform and how they are regulated across the plant's developmental stages.</p>
       </div>
       <div class="obj-card">
-        <span class="obj-num">Obiettivo 03</span>
-        <h3>[Titolo obiettivo 3]</h3>
-        <p>[Descrizione sintetica.]</p>
+        <span class="obj-num">Objective 03</span>
+        <h3>Study their role in wheat adaptation</h3>
+        <p>Extend the analysis to 50 cultivars and 50 landraces of wheat, to assess whether these genes contributed to adaptation to different environments during domestication.</p>
       </div>
     </div>
   </div>
@@ -378,24 +381,24 @@
 
 <section id="metodologia">
   <div class="wrap">
-    <span class="eyebrow">Come procediamo</span>
-    <h2>Metodologia e timeline</h2>
-    <p class="section-intro">[Descrivi in breve l'approccio metodologico generale prima di elencare le fasi.]</p>
+    <span class="eyebrow">How we work</span>
+    <h2>Methodology and timeline</h2>
+    <p class="section-intro">The project runs for 36 months and is organised into three main phases (pillars), each with its own timeframe, alongside ongoing coordination and dissemination activities.</p>
     <div class="timeline">
       <div class="t-item">
-        <span class="t-date">Fase 1 — MM/AAAA</span>
-        <h4>[Nome fase]</h4>
-        <p>[Cosa succede in questa fase, quali attività e output.]</p>
+        <span class="t-date">Pillar 1 — Months 1-24</span>
+        <h4>Identification of ETEs in the wheat genome</h4>
+        <p>Collection of plant material, sequencing, and development of the bioinformatic pipeline to identify exapted transposable elements in bread wheat and its diploid and tetraploid relatives.</p>
       </div>
       <div class="t-item">
-        <span class="t-date">Fase 2 — MM/AAAA</span>
-        <h4>[Nome fase]</h4>
-        <p>[Cosa succede in questa fase.]</p>
+        <span class="t-date">Pillar 2 — Months 8-36</span>
+        <h4>Functional characterisation of ETEs</h4>
+        <p>Analysis of tissue-specific expression and DNA methylation profiles to understand the biological role of the genes identified.</p>
       </div>
       <div class="t-item">
-        <span class="t-date">Fase 3 — MM/AAAA</span>
-        <h4>[Nome fase]</h4>
-        <p>[Cosa succede in questa fase.]</p>
+        <span class="t-date">Pillar 3 — Months 8-36</span>
+        <h4>Genomic variability across cultivars and landraces</h4>
+        <p>Extension of the analysis to 50 cultivars and 50 landraces of wheat to assess the contribution of these genes to species adaptation.</p>
       </div>
     </div>
   </div>
@@ -403,25 +406,33 @@
 
 <section class="alt" id="team">
   <div class="wrap">
-    <span class="eyebrow">Chi lavora al progetto</span>
-    <h2>Team di ricerca</h2>
+    <span class="eyebrow">Who's on the project</span>
+    <h2>Research team</h2>
+    <p class="section-intro">Alongside the Principal Investigator, the project will recruit a dedicated research team over the course of the three years.</p>
     <div class="team-grid">
       <div class="member">
-        <div class="avatar">PI</div>
-        <h4>Prof. Flavia Mascagni</h4>
+        <div class="avatar">FM</div>
+        <h4>Flavia Mascagni</h4>
         <div class="role">Principal Investigator</div>
+        <div class="affil">Dept. of Agriculture, Food and Environment (DAFE), University of Pisa</div>
       </div>
       <div class="member">
-        <div class="avatar">RC</div>
-        <h4>[Nome Cognome]</h4>
-        <div class="role">Ricercatore</div>
-        <div class="affil">[Dipartimento, Università]</div>
+        <div class="avatar">PD</div>
+        <h4>3 Postdoc researchers</h4>
+        <div class="role">To be recruited</div>
+        <div class="affil">Bioinformatics and plant genomics</div>
       </div>
       <div class="member">
-        <div class="avatar">DR</div>
-        <h4>[Nome Cognome]</h4>
-        <div class="role">Dottorando/a</div>
-        <div class="affil">[Dipartimento, Università]</div>
+        <div class="avatar">PhD</div>
+        <h4>2 PhD students</h4>
+        <div class="role">To be recruited</div>
+        <div class="affil">Support across all project phases</div>
+      </div>
+      <div class="member">
+        <div class="avatar">TL</div>
+        <h4>1 Laboratory technician</h4>
+        <div class="role">To be recruited</div>
+        <div class="affil">Plant growth and genomic material extraction</div>
       </div>
     </div>
   </div>
@@ -429,83 +440,67 @@
 
 <section id="risultati">
   <div class="wrap">
-    <span class="eyebrow">Cosa abbiamo prodotto</span>
-    <h2>Risultati e pubblicazioni</h2>
-    <ul class="pub-list">
-      <li class="pub-item">
-        <span class="pub-year">AAAA</span>
-        <div class="pub-body">
-          <h4>[Titolo della pubblicazione o dell'output]</h4>
-          <p>[Autori, rivista/venue, breve nota.]</p>
-          <a href="#">Leggi lo studio →</a>
-        </div>
-      </li>
-      <li class="pub-item">
-        <span class="pub-year">AAAA</span>
-        <div class="pub-body">
-          <h4>[Titolo della pubblicazione o dell'output]</h4>
-          <p>[Autori, rivista/venue, breve nota.]</p>
-          <a href="#">Leggi lo studio →</a>
-        </div>
-      </li>
-    </ul>
+    <span class="eyebrow">What we've produced</span>
+    <h2>Results and publications</h2>
+    <div class="abstract-box" style="border-left-color:var(--gold);">
+      <p>The project is in its early stages. Publications, datasets and other research outputs will be added to this section progressively as they become available, in line with the transparency requirements of the FIS 2 Call.</p>
+    </div>
     <div class="stat-row">
-      <div class="stat"><div class="num">00</div><div class="lab">Pubblicazioni</div></div>
-      <div class="stat"><div class="num">00</div><div class="lab">Dataset rilasciati</div></div>
-      <div class="stat"><div class="num">00</div><div class="lab">Presentazioni a convegni</div></div>
+      <div class="stat"><div class="num">00</div><div class="lab">Publications</div></div>
+      <div class="stat"><div class="num">00</div><div class="lab">Datasets released</div></div>
+      <div class="stat"><div class="num">00</div><div class="lab">Conference presentations</div></div>
     </div>
   </div>
 </section>
 
 <section class="alt" id="finanziamento">
   <div class="wrap">
-    <span class="eyebrow">Trasparenza</span>
-    <h2>Finanziamento</h2>
+    <span class="eyebrow">Transparency</span>
+    <h2>Funding</h2>
     <div class="funding-panel">
       <div class="col">
-        <div class="label">Ente finanziatore</div>
-        <div class="val">Fondo Italiano per la Scienza (FIS)</div>
+        <div class="label">Funding body</div>
+        <div class="val">Fondo Italiano per la Scienza — Italian Fund for Science (FIS)</div>
       </div>
       <div class="col">
-        <div class="label">Bando</div>
-        <div class="val">[Nome del bando / annualità]</div>
+        <div class="label">Call</div>
+        <div class="val">FIS 2 Call — Starting Grant</div>
       </div>
       <div class="col">
-        <div class="label">Codice identificativo</div>
-        <div class="val">FIS-0000-0000</div>
+        <div class="label">Project code</div>
+        <div class="val">FIS-02552</div>
       </div>
       <div class="col">
-        <div class="label">Importo finanziato</div>
-        <div class="val">€ [importo]</div>
+        <div class="label">Amount awarded</div>
+        <div class="val">€ 1,395,280</div>
       </div>
     </div>
     <div class="funding-disclosure">
-      <p>Il presente progetto è stato realizzato con il finanziamento del <strong>Ministero dell'Università e della Ricerca (MUR)</strong> nell'ambito dell'Avviso FIS 2 (Decreto Direttoriale n. 1236 del 1° agosto 2023 — Fondo Italiano per la Scienza 2022-2023).</p>
-      <p style="margin-top:10px;">[Finalità del progetto: sintetizza in 1-2 frasi l'obiettivo per cui è stato ottenuto il sostegno finanziario.]</p>
-      <p style="margin-top:10px;">[Risultati attesi: descrivi cosa si prevede di ottenere entro la conclusione del progetto.]</p>
-      <p style="margin-top:10px;">[Risultati raggiunti: da aggiornare progressivamente durante l'attuazione del progetto, come richiesto dalle Linee Guida FIS 2.]</p>
+      <p>This project was carried out with funding from the <strong>Ministero dell'Università e della Ricerca — Italian Ministry of University and Research (MUR)</strong> under the FIS 2 Call (Decreto Direttoriale n. 1236 of 1 August 2023 — Italian Fund for Science 2022-2023).</p>
+      <p style="margin-top:10px;"><strong>Purpose:</strong> to identify, for the first time, genes derived from transposable elements (ETEs) in the bread wheat genome and reconstruct their evolutionary history, to understand how new genes can emerge from repetitive DNA sequences.</p>
+      <p style="margin-top:10px;"><strong>Expected results:</strong> a characterised collection of ETEs in wheat and its wild relatives, their expression and methylation profiles, and an assessment of their role in the adaptation of cultivars and landraces.</p>
+      <p style="margin-top:10px;"><strong>Results achieved:</strong> this section will be updated progressively as the project is carried out, as required by the FIS 2 Guidelines.</p>
     </div>
   </div>
 </section>
 
 <section id="contatti">
   <div class="wrap">
-    <span class="eyebrow">Parliamone</span>
-    <h2>Contatti</h2>
+    <span class="eyebrow">Get in touch</span>
+    <h2>Contact</h2>
     <div class="contact-grid">
       <div class="contact-block">
         <div class="label">Email</div>
-        <a href="mailto:progetto@example.it">progetto@example.it</a>
+        <a href="mailto:flavia.mascagni@unipi.it">flavia.mascagni@unipi.it</a>
       </div>
       <div class="contact-block">
-        <div class="label">Istituzione</div>
-        <p>[Nome dipartimento]</p>
-        <p>[Indirizzo]</p>
+        <div class="label">Institution</div>
+        <p>Dept. of Agriculture, Food and Environment (DAFE)</p>
+        <p>University of Pisa — Lungarno Pacinotti, 43/44, Pisa, Italy</p>
       </div>
       <div class="contact-block">
-        <div class="label">Segui il progetto</div>
-        <a href="#">GitHub del progetto</a>
-        <a href="#">ORCID / profilo PI</a>
+        <div class="label">Follow the project</div>
+        <a href="https://orcid.org/0000-0001-9747-8040">PI's ORCID</a>
       </div>
     </div>
   </div>
@@ -513,14 +508,14 @@
 
 <footer>
   <div class="wrap" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px; width:100%;">
-    <span>© <span id="year"></span> [Nome progetto] — Tutti i diritti riservati</span>
+    <span>© <span id="year"></span> NEXT-G — All rights reserved</span>
     <div class="footer-signature">
-      <!-- Stessa gerarchia della barra in alto: sostituire con i file ufficiali dei loghi -->
-      <div class="logo-slot"><span class="logo-fallback" style="font-size:0.78rem;">Ministero dell'Università e della Ricerca</span></div>
+      <!-- Same hierarchy as the top bar: replace with the official logo files -->
+      <div class="logo-slot"><span class="logo-fallback" style="font-size:0.78rem;">Italian Ministry of University and Research</span></div>
       <span class="divider" aria-hidden="true"></span>
       <div class="logo-slot"><span class="logo-fallback" style="font-size:0.78rem;">FIS 2</span></div>
     </div>
-    <span>Finanziato dal Ministero dell'Università e della Ricerca — Avviso FIS 2</span>
+    <span>Funded by the Italian Ministry of University and Research — FIS 2 Call</span>
   </div>
 </footer>
 

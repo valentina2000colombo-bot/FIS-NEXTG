@@ -83,10 +83,14 @@
     padding: 88px 0 72px;
     border-bottom: 1px solid var(--line);
   }
-  .hero-logo{
-    display:block; height: auto; width: 100%; max-width: 80px;
-    margin-bottom: 32px;
-  }
+  .hero-top{
+  display:flex; align-items:center; gap:24px; flex-wrap:wrap;
+  margin-bottom: 22px;
+}
+.hero-logo{
+  display:block; height: auto; width: 170px; max-width: 40vw;
+  flex-shrink: 0;
+}
   .funding-badge{
     display:inline-flex; align-items:center; gap:8px;
     font-family: var(--mono); font-size: 0.78rem;
@@ -238,7 +242,7 @@
      separated by a vertical line, with a minimum clear space equal to 1/7
      of the full logo's base width (1/8 if placed next to text). --------------- */
   .signature-bar{
-    background: #2B4C8C; /* blu istituzionale MUR, sostituire se necessario con i toni ufficiali */
+    background: #1C2E23; /* blu istituzionale MUR, sostituire se necessario con i toni ufficiali */
     color: #FFFFFF;
     padding: 14px 0;
   }
@@ -289,7 +293,7 @@
       <span class="logo-fallback">Italian Ministry of<small>University and Research</small></span>
     </div>
     <span class="divider" aria-hidden="true"></span>
-    <div class="logo-slot">
+    <div class="logo-FIS">
       <span class="logo-fallback fis-mark">FIS 2</span>
     </div>
   </div>
@@ -311,10 +315,11 @@
 </header>
 
 <section class="hero">
-  <div class="wrap">
+  <div class="hero-top">
     <img src="logo-next-g-icon.png" alt="NEXT-G project logo" class="hero-logo">
-    <span class="funding-badge">★ Funded by the Italian Fund for Science</span>
     <h1>How new genes emerge: exploring a model of novel gene creation following the evolution of wheat</h1>
+    </div>
+<span class="funding-badge">★ Funded by the Italian Fund for Science</span>
     <p class="lede">
       This project studies how certain mobile DNA elements (transposons), often dismissed as "junk DNA",
       can turn into fully-fledged new genes. Using wheat — one of the world's most important crops,
